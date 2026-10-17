@@ -96,16 +96,19 @@
 
 <header>
   <h1>Politique de confidentialité de Dimly</h1>
-  <p class="sous-titre">Dernière mise à jour : 31 août 2026</p>
+  <p class="sous-titre">Dernière mise à jour : 17 octobre 2026</p>
 </header>
 
 <div class="resume">
   <p><strong>En résumé.</strong> Dimly n'a pas de compte et pas de serveur. Tout ce que vous
   saisissez — votre prénom, vos réponses, vos routines, votre progression — reste dans votre
   iPhone et n'est envoyé nulle part.</p>
-  <p>Le seul flux sortant concerne l'abonnement : il passe par Apple pour le paiement et par
-  RevenueCat pour vérifier que l'abonnement est actif. Aucune publicité, aucun traqueur,
-  aucune mesure d'audience, aucune revente de données.</p>
+  <p>Deux choses seulement quittent le téléphone. L'abonnement passe par Apple pour le
+  paiement et par RevenueCat pour vérifier qu'il est actif. Et PostHog, hébergé dans
+  l'Union européenne, reçoit des statistiques d'usage anonymes — quels écrans sont vus,
+  si une routine va au bout — pour comprendre où l'application aide et où elle perd ses
+  utilisateurs. Rien de ce que vous écrivez n'y figure. Aucune publicité, aucun suivi d'une
+  application à l'autre, aucune revente de données.</p>
 </div>
 
 <h2>1. Qui est responsable de ces données</h2>
@@ -220,7 +223,8 @@
 
 <h2>6. Les services tiers réellement utilisés</h2>
 <p>
-  Dimly ne fait appel qu'à deux services extérieurs, et uniquement pour l'abonnement.
+  Dimly fait appel à trois services extérieurs : deux pour l'abonnement, un pour les
+  statistiques d'usage.
 </p>
 
 <h3>Apple — App Store et achats intégrés</h3>
@@ -258,6 +262,12 @@
   RevenueCat.
 </p>
 <p>
+  RevenueCat transmet à PostHog (ci-dessous) les événements de votre abonnement : début d'un
+  essai, souscription, renouvellement, résiliation, expiration. Pour qu'ils se rattachent aux
+  statistiques de la même installation, Dimly confie à RevenueCat l'identifiant anonyme que
+  PostHog a attribué à cette installation.
+</p>
+<p>
   Politique de confidentialité de RevenueCat :
   <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener">revenuecat.com/privacy</a>.
   Ces données sont hébergées aux États-Unis ; le transfert est encadré par les clauses
@@ -265,12 +275,50 @@
   prestataire.
 </p>
 
+<h3>PostHog — statistiques d'usage</h3>
+<p>
+  PostHog (PostHog Inc.) mesure le parcours dans l'application, pour savoir à quel écran de
+  l'accueil on abandonne, si l'écran d'abonnement est refermé ou mène à un achat, et combien
+  de routines sont menées jusqu'au bout. Les données sont hébergées dans l'Union européenne
+  (<code>eu.i.posthog.com</code>).
+</p>
+<p>Ce service reçoit :</p>
+<ul>
+  <li>un <strong>identifiant anonyme</strong>, tiré au hasard à la première ouverture et propre
+  à votre installation. Il n'est relié à aucun nom, aucun e-mail, aucun identifiant Apple ;</li>
+  <li>des <strong>événements d'usage</strong> : installation, mise à jour, ouverture et mise en arrière-plan
+  de l'application ; écrans de l'accueil vus (par leur identifiant technique, par exemple
+  « reveil ») ; ouverture et fermeture de l'écran d'abonnement, et ce qui l'a ouvert ; achat
+  commencé, abouti ou annulé, et l'offre choisie (annuelle ou mensuelle) ; routine terminée,
+  avec sa durée en minutes, son nombre d'étapes et s'il s'agit d'une routine du matin ou du
+  soir ;</li>
+  <li>le fait d'être abonné ou non, joint à chaque événement ;</li>
+  <li>des informations techniques sur l'appareil et l'installation : fabricant et modèle
+  (par exemple « iPhone 15 »), version d'iOS, version de l'application, langue, fuseau
+  horaire, taille de l'écran ;</li>
+  <li>votre <strong>adresse IP</strong>, transmise par nature lors de la connexion. PostHog en
+  déduit un pays et une ville approximatifs, puis <strong>ne la conserve pas</strong> : elle est
+  effacée des événements enregistrés.</li>
+</ul>
+<p>
+  <strong>Rien de ce que vous saisissez n'est transmis à PostHog</strong> : ni prénom, ni
+  réponses aux questions d'accueil, ni noms de routines ou d'étapes, ni heures choisies. Aucun
+  enregistrement d'écran, aucune capture des gestes ou des frappes.
+</p>
+<p>
+  Politique de confidentialité de PostHog :
+  <a href="https://posthog.com/privacy" target="_blank" rel="noopener">posthog.com/privacy</a>.
+  PostHog Inc. étant une société américaine, l'accès éventuel à ces données depuis les
+  États-Unis est encadré par les clauses contractuelles types de la Commission européenne,
+  prévues à son contrat de traitement des données.
+</p>
+
 <h3>Ce que Dimly n'utilise pas</h3>
 <p>
-  Aucun outil de mesure d'audience ou de statistiques (pas de Google Analytics, Firebase,
-  Amplitude, Mixpanel, PostHog ou équivalent). Aucun outil de suivi des plantages. Aucune
-  régie publicitaire. Aucun réseau social intégré. Aucun identifiant publicitaire n'est lu.
-  Aucune donnée n'est vendue, louée ou échangée, à quiconque et pour quelque motif que ce soit.
+  Aucun autre outil de statistiques que PostHog. Aucun outil de suivi des plantages. Aucune
+  régie publicitaire. Aucun réseau social intégré. Aucun identifiant publicitaire n'est lu, et
+  aucune donnée ne sert à vous suivre d'une application ou d'un site à l'autre. Aucune donnée
+  n'est vendue, louée ou échangée, à quiconque et pour quelque motif que ce soit.
 </p>
 
 <h2>7. Sur quelle base légale</h2>
@@ -278,6 +326,9 @@
   <li><strong>Exécution du contrat</strong> (article 6.1.b du RGPD) : les données enregistrées
   dans votre téléphone et la vérification de l'abonnement sont nécessaires au fonctionnement du
   service que vous avez demandé.</li>
+  <li><strong>Intérêt légitime</strong> (article 6.1.f) : les statistiques d'usage envoyées à
+  PostHog servent uniquement à améliorer l'application. Elles sont anonymes, limitées à ce qui
+  est décrit plus haut, et vous pouvez vous y opposer à tout moment (section 9).</li>
   <li><strong>Consentement</strong> (article 6.1.a) : les notifications et l'autorisation Temps
   d'écran ne sont activées qu'après votre accord explicite, donné par la fenêtre du système.
   Vous pouvez le retirer à tout moment depuis les réglages de votre iPhone.</li>
@@ -293,6 +344,8 @@
   par routine ; au-delà, les plus anciennes sont automatiquement supprimées.</li>
   <li><strong>Jeton de sélection des applications bloquées</strong> : conservé sur l'appareil
   tant que la routine concernée existe.</li>
+  <li><strong>Statistiques d'usage chez PostHog</strong> : conservées au plus 24 mois, puis
+  supprimées.</li>
   <li><strong>Données d'abonnement chez RevenueCat et Apple</strong> : conservées par ces
   prestataires selon leurs propres politiques, pendant la durée de vie de l'abonnement et
   ensuite pour la durée nécessaire à leurs obligations comptables et fiscales.</li>
@@ -312,6 +365,11 @@
   compte, l'identification passe par l'identifiant anonyme de votre installation ; nous vous
   indiquerons comment le retrouver. Vous pouvez aussi vous adresser directement à Apple pour
   ce qui relève de votre compte App Store.</li>
+  <li><strong>Pour les statistiques d'usage</strong> : écrivez à
+  <a href="mailto:brubrubrudev@proton.me">brubrubrudev@proton.me</a> pour vous opposer à leur
+  collecte ou en demander l'effacement. Comme elles sont anonymes, nous vous indiquerons comment
+  retrouver l'identifiant de votre installation. Désinstaller Dimly arrête aussitôt tout envoi,
+  et une réinstallation repart d'un nouvel identifiant, sans lien avec l'ancien.</li>
 </ul>
 <p>
   Si vous estimez que vos droits ne sont pas respectés, vous pouvez saisir l'autorité de
@@ -322,7 +380,7 @@
 <p>
   Les données de l'application sont stockées dans l'espace privé que le système d'exploitation
   réserve à Dimly, protégé par le chiffrement de l'appareil et inaccessible aux autres
-  applications. Les échanges avec Apple et RevenueCat se font par connexion chiffrée (HTTPS).
+  applications. Les échanges avec Apple, RevenueCat et PostHog se font par connexion chiffrée (HTTPS).
 </p>
 
 <h2>11. Modifications de cette politique</h2>
